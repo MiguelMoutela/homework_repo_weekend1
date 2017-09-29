@@ -21,12 +21,12 @@ end
 
 def stock_count(pet_shop)
 
-  # pet_shop[:pets].count()
-  count = 0
-  for pet in pet_shop[:pets]
-  count += 1
-  end
-  return count
+  pet_shop[:pets].count()
+  # count = 0
+  # for pet in pet_shop[:pets]
+  # count += 1
+  # end
+  # return count
 
 end
 
@@ -70,8 +70,12 @@ def remove_pet_by_name(pet_shop, name)
 
   pet_shop[:pets].delete(pet_to_be_deleted)
 
-  else
+end
 
-    return nil
+def add_pet_to_stock(pet_shop, new_pet)
+
+  pet_shop[:pets].push(new_pet)
+
+  return stock_count(pet_shop)
 
 end
