@@ -13,3 +13,8 @@ end
 def pets_sold(pet_shop)
   pet_shop[:admin][:pets_sold]
 end
+
+def increase_pets_sold(pet_shop, sold)
+  sold = 2
+  pet_shop[:admin][:pets_sold] += sold
+end
