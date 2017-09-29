@@ -66,9 +66,9 @@ end
 
 def remove_pet_by_name(pet_shop, name)
 
-  a = find_pet_by_name(pet_shop, name)
+  pet_to_be_deleted = find_pet_by_name(pet_shop, name)
 
-  pet_shop[:pets].delete(a)
+  pet_shop[:pets].delete(pet_to_be_deleted)
 
   else
 
