@@ -47,6 +47,7 @@ def pets_by_breed(pet_shop, breed)
 
 end
 
+
 def find_pet_by_name(pet_shop, name)
 
     for pet in pet_shop[:pets]
@@ -62,6 +63,7 @@ def find_pet_by_name(pet_shop, name)
     return nil
 
 end
+
 
 def remove_pet_by_name(pet_shop, name)
 
@@ -109,6 +111,9 @@ end
 
 def sell_pet_to_customer(pet_shop, pet, customer)
 
+  return if pet == nil
+  # if pet == nil ==> does not work because it is still running code with pet == nil
+  # we need it to NOT run the code if pet == nil !!!
   add_pet_to_customer(customer, pet)
 
 
@@ -117,9 +122,20 @@ def sell_pet_to_customer(pet_shop, pet, customer)
 
   add_or_remove_cash(pet_shop, pet[:price])
 
-end
 
-def sell_pet_customer__pet_not_found
+
+# else
+#
+#     puts "yay!"
+#
+#     add_pet_to_customer(customer, pet)
+#
+#
+#     increase_pets_sold(pet_shop, 1)
+#
+#
+#     add_or_remove_cash(pet_shop, pet[:price])
+
 
 
 end
