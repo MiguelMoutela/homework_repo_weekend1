@@ -85,9 +85,9 @@ def customer_pet_count(customer)
 
 end
 
-def add_pet_to_customer(customer, new_pet)
+def add_pet_to_customer(customer, pet)
 
-  customer[:pets].push(new_pet).length
+  customer[:pets].push(pet).length
 
 end
 
@@ -116,5 +116,10 @@ def sell_pet_to_customer(pet_shop, pet, customer)
 
 
   add_or_remove_cash(pet_shop, pet[:price])
+
+end
+
+def sell_pet_customer__pet_not_found
+
 
 end
