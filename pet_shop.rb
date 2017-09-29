@@ -15,7 +15,6 @@ def pets_sold(pet_shop)
 end
 
 def increase_pets_sold(pet_shop, sold)
-  sold = 2
   pet_shop[:admin][:pets_sold] += sold
 end
 
@@ -105,5 +104,15 @@ def customer_can_afford_pet(customer, pet_to_be_bought)
     return false
 
   end
+
+end
+
+def sell_pet_to_customer(pet_shop, new_pet, customer)
+
+  add_pet_to_customer(customer, new_pet)
+
+
+  increase_pets_sold(pet_shop, 1)
+
 
 end
