@@ -111,9 +111,10 @@ end
 
 def sell_pet_to_customer(pet_shop, pet, customer)
 
-  return if pet == nil
+  return if pet == nil || (customer_can_afford_pet(customer, pet) == false)
   # if pet == nil ==> does not work because it is still running code with pet == nil
   # we need it to NOT run the code if pet == nil !!!
+  # btw - break does not break the code
   add_pet_to_customer(customer, pet)
 
 
@@ -122,7 +123,7 @@ def sell_pet_to_customer(pet_shop, pet, customer)
 
   add_or_remove_cash(pet_shop, pet[:price])
 
-
+end
 
 # else
 #
@@ -135,7 +136,3 @@ def sell_pet_to_customer(pet_shop, pet, customer)
 #
 #
 #     add_or_remove_cash(pet_shop, pet[:price])
-
-
-
-end
