@@ -42,7 +42,9 @@ def pets_by_breed(pet_shop, breed)
       end
 
     end
-
+## if we do not return the
+## pets array, we get the
+## the whole array we iterated over.
     return pets
 
 end
