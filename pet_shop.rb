@@ -75,6 +75,24 @@ def remove_pet_by_name(pet_shop, name)
 
 end
 
+# this runs as well
+# def remove_pet_by_name(pet_shop, name)
+#
+#   for pet in pet_shop[:pets]
+#
+#     if pet[:name] == name
+#
+#     pet_shop[:pets].delete(pet)
+#
+#     end
+#
+#   end
+#
+#   return nil
+#
+# end
+
+
 def add_pet_to_stock(pet_shop, new_pet)
 
   pet_shop[:pets].push(new_pet)
